@@ -57,7 +57,7 @@ class SignupForm extends React.Component {
               text: 'you have signed up successfully'
             })
           },
-          ({ data }) => this.setState({ errors: data, isLoading: false })
+          (err) => this.setState({ errors: err.response.data, isLoading: false })
         );
     }
   }

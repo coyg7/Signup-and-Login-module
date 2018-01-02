@@ -4,7 +4,7 @@
   "description": "Test",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.12.0",
+    "axios": "0.13.1",
     "babel-core": "^6.18.2",
     "bcrypt": "^1.0.3",
     "bluebird": "^3.5.1",
@@ -39,7 +39,7 @@
     "webpack-hot-middleware": "^2.13.1"
   },
   "scripts": {
-    "server": "nodemon --watch server --exec babel-node -- server/index.js"
+    "start": "nodemon --watch server --exec babel-node -- server/index.js"
   },
   "keywords": [
     "ReactJS"
