@@ -7,13 +7,16 @@ export default () => {
       <div className="container-fluid">
         <div className="navbar-header">
           <Link to="/" className="navbar-brand">
-            Red Dice
+            Logo
           </Link>
         </div>
         <div className="collapse navbar-collapse">
           <ul className="navbar navbar-nav navbar-right">
             <li>
               <Link to="signup">SignUp</Link>
+            </li>
+            <li>
+              <Link to="login">Login</Link>
             </li>
           </ul>
         </div>
