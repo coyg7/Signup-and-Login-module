@@ -17,16 +17,18 @@ export default (req, res, next) => {
         res.status(401).json({ error: "Failed to authenticate " });
       } else {
         User.query({
-          where: {id: decoded.id},
-          select: [ 'email', 'id', 'username' ]
-        }).fetch().then(user => {
-          if (!user) {
-            res.status(404).json({ error: "User not found" });
-          }
-
-          req.currentUser = user;
-          next();
-        });
+          where: { id: decoded.id },
+          select: ["email", "id", "username"]
+        })
+          .fetch()
+          .then(user => {
+            if (!user) {
+              res.status(404).json({ error: "User not found" });
+            } else {
+              req.currentUser = user;
+              next();
+            }
+          });
       }
     });
   } else {
