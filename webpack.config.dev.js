@@ -28,7 +28,7 @@ export default {
                 ],
                 loaders: ['babel']
             }
-        ]
+        ],
     },
     resolve: {
         extentions: ['', '.js']
